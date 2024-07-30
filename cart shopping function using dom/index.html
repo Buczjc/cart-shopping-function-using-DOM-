@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRACTICE</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="img-block-sample"></div>
+        <h2>Some Item</h2>
+        <h3>$5</h3>
+        <button onclick="popShow()" class="buy-btn">Buy now</button>
+      </div>
+
+      <div class="shop-container">
+        <button onclick="closeShop()" class="close-btn">X</button>
+        <div class="another-freaking-container">
+          <div class="img-block-sample"></div>
+          <h2>Some Item</h2>
+          <h3 class="amount">$5</h3>
+          <div class="amount-Btn">
+            <button onclick="decreaseQty()" class="decrease">-</button>
+            <input onclick="checkoutFunc()" type="submit" value="Checkout" />
+            <button onclick="increaseQty()" class="increase">+</button>
+          </div>
+          <h3>Quantity :</h3>
+          <p class="qty">1</p>
+        </div>
+      </div>
+
+      <div class="successfully-paid-container">
+        <button onclick="closeSuccessfullyPaidContainer()" class="close-btn">X</button>
+        <div class="successfully-paid-container-txt">
+        <h3 style="font-size: 2rem;">Successfuly Purchased</h3>
+        <p style="font-size: 3rem;">&#128175</p>
+      </div>
+      </div>
+    </div>
+
+    <script>
+      const showShop = document.querySelector(".shop-container");
+      const showSuccessfullyPaidContainer = document.querySelector(".successfully-paid-container");
+      const increaseBtn = document.querySelector(".increase");
+      const decreaseBtn = document.querySelector(".decrease");
+
+      let qty = document.querySelector(".qty");
+      let changeAmountCash = document.querySelector(".amount");
+
+      function popShow() {
+        showShop.style.display = "block";
+      }
+
+      function closeShop() {
+        showShop.style.display = "none";
+      }
+
+      function closeSuccessfullyPaidContainer() {
+        showSuccessfullyPaidContainer.style.display = "none";
+      }
+
+      function checkoutFunc() {
+        showSuccessfullyPaidContainer.style.display = "block";
+        showShop.style.display = "none";
+      }
+
+      function increaseQty() {
+        qty.textContent = Number(qty.textContent) + 1;
+        changeAmountCash.textContent =
+          "$" + (Number(changeAmountCash.textContent.replace("$", "")) + 5);
+      }
+      function decreaseQty() {
+        qty.textContent = Number(qty.textContent) - 1;
+        changeAmountCash.textContent =
+          "$" + (Number(changeAmountCash.textContent.replace("$", "")) - 5);
+      }
+    </script>
+  </body>
+</html>

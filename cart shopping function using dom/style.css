@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 200px;
+  height: 250px;
+  border: 2px black solid;
+  box-shadow: 5px 10px #888888;
+  background-color: rgba(18, 17, 17, 0.923);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card h2 {
+  margin-bottom: 5px;
+}
+
+.card h3 {
+  margin-bottom: 30px;
+}
+
+.img-block-sample {
+  width: 50px;
+  height: 50px;
+  border: 2px green solid;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.buy-btn {
+  border-radius: 100px;
+  padding: 5px 10px;
+  border-style: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: rgb(95, 88, 88);
+  cursor: pointer;
+}
+
+.buy-btn:hover {
+  color: white;
+  background-color: rgb(27, 26, 26);
+}
+
+.close-btn {
+  border-radius: 200px;
+  width: 30px;
+  height: 30px;
+  border-style: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: rgb(3, 3, 3);
+  cursor: pointer;
+  color: white;
+  margin: 10px;
+}
+
+.close-btn:hover {
+  background-color: rgb(27, 26, 26);
+}
+
+.shop-container {
+  position: absolute;
+  right: 300px;
+  width: 300px;
+  height: 400px;
+  background-color: rgb(187, 178, 178);
+}
+
+.another-freaking-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.amount {
+  margin-bottom: 20px;
+}
+
+.amount-Btn {
+  margin-bottom: 20px;
+}
+
+input[type="submit"] {
+  background-color: rgb(47, 46, 46);
+  color: white;
+  border-style: none;
+  padding: 5px 10px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.increase,
+.decrease {
+  background-color: rgb(47, 46, 46);
+  color: white;
+  border-style: none;
+  padding: 5px 10px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.increase:hover,
+.decrease:hover,
+input[type="submit"]:hover {
+  background-color: rgb(78, 74, 74);
+}
+
+.successfully-paid-container {
+  position: absolute;
+  z-index: 9;
+  width: 500px;
+  height: 300px;
+  background-color: rgb(20, 19, 19);
+  color: white;
+}
+
+.successfully-paid-container-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+}
